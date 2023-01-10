@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+              function inmultire (a, b){
+                  return a * b;
+              }
+              function adunare (n, m = 5){
+                  if(typeof n =='number'&& typeof m=='number'){
+                  return n + m;
+              }
+              else{
+                  return 0;
+              }
+            }
+              /* m ( sau oricare alta cifra definita in paranteze)
+              este valoarea de backup in cazul in care nu avem definit un numar
+              ca in cazul de mai jos unde la 'adunare'am fi pus doar x*/
+              function scadere (n, m){
+              if (n<m){
+              return m-n;
+          }
+              else{
+              return n-m;
+          }
+
+      }
+      function impartire (n, m){
+        if (n<m){
+            return m/n;
+        }
+        else {
+            return n/m;
+        }
+      }
+          /*    console.log (inmultire (5, 4));
+              let x=23, y=22;
+              console.log (`adunarea dintre ${x} si ${y} este `, adunare (x, y))
+              console.log (`Scaderea dintre ${x} si ${y} este `, scadere (x, y))*/
+              let x = eval(prompt('Primul numar este', 2));
+              let y = eval(prompt('Al 2-lea numar este', 4));
+              
+              let operatie = prompt('Operatia efectuata este: a-adunare, s-scadere, im-impartire, in-inmultire');
+              alert (operatie);
+              if (operatie == 'a') {
+                console.log ('Rezultatul adunarii este', adunare(x, y));
+              }
+              if (operatie == 's') {
+                console.log ('Rezultatul scaderii este', scadere(x, y));
+              }
+              if (operatie == 'im') {
+                console.log ('Rezultatul impartirii este', impartire(x, y));
+              }
+              if (operatie == 'in') {
+                console.log ('Rezultatul inmultirii este', inmultire(x, y));
+              }
+    </script>
+  </body>
+</html>
