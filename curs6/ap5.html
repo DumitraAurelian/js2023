@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmultire</title>
+</head>
+<body>
+    
+    <script>
+        function mul (x){
+            return function (y){ //functie anonima
+                return function(z){ //functie anonima
+                    return x*y*z;
+                }
+            }
+        }
+        console.log(mul(2)(3)(4));
+        // unde 2 e x, 3 e y, 4 e z
+
+        console.log(mul(4)(3)(4));
+        // unde 4 e z, 3 e y,4 e z
+    </script>
+
+</body>
+</html>
