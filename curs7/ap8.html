@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colectare numere de telefon </title>
+</head>
+<body>
+    <p id="sursa">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores amet 
+        quibusdam deserunt accusantium exercitationem, debitis numquam nostrum molestias tenetur totam provident voluptas et ab omnis eligendi praesentium. Fugit, at eos?
+        0765555558 +40247778889 0213455555
+    </p>
+    <p id="destinatie"></p>
+    <script>
+        let sursa= document.getElementById('sursa').innerHTML;
+        console.log(sursa);
+        let pattern=/[/+]?[0-9/s]{10,13}/g;
+        // pattern inseamna ca ii dau sa caute numere de la 0 la 9, cu marimea intre 10 si 13 caractere adica{10,13}, si cele cu + in fata iar semnul intrebarii face cerinta optionala
+        let result=sursa.match(pattern);
+        document.getElementById("destinatie").innerHTML=result;
+    </script>
+</body>
+</html>
